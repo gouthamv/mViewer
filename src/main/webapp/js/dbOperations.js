@@ -207,7 +207,7 @@ YUI({
                     dbDiv.set("innerHTML", dbNames);
                     var menu = Y.one("#dbNames");
                     menu.unplug(Y.Plugin.NodeMenuNav);
-                    menu.plug(Y.Plugin.NodeMenuNav, { autoSubmenuDisplay: false, mouseOutHideDelay: 0 });
+                    menu.plug(Y.Plugin.NodeMenuNav, { autoSubmenuDisplay: false, mouseOutHideDelay: 0,submenuHideDelay: 0 });
                     menu.set("style.display", "block");
                     MV.hideLoadingPanel();
                     sm.publish(sm.events.dbsChanged);
@@ -279,5 +279,5 @@ YUI({
         });
 
         // Make a request to load Database names when the page loads
-        Y.on("load", requestConnectionDetails);
+     //   Y.on("load", requestConnectionDetails);
     });
